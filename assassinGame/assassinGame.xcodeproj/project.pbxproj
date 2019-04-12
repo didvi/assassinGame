@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E5C4CD287CCCD5278FE7E23F /* Pods_assassinGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46160174778DD42C76098EB4 /* Pods_assassinGame.framework */; };
+		F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */; };
+		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
+		F298A68C226008760018E032 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68B226008760018E032 /* Game.swift */; };
+		F298A68E2260088D0018E032 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68D2260088D0018E032 /* Player.swift */; };
+		F298A690226008A30018E032 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68F226008A30018E032 /* Snapshot.swift */; };
+		F2E434F3225F054500461866 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E434F2225F054500461866 /* DatabaseController.swift */; };
 		F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */; };
 		F2F173AB225EB1AC006D0F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F173AA225EB1AC006D0F5B /* ViewController.swift */; };
 		F2F173AE225EB1AC006D0F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F173AC225EB1AC006D0F5B /* Main.storyboard */; };
@@ -19,6 +25,12 @@
 		320CEEBBCD4616113315522F /* Pods-assassinGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.release.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.release.xcconfig"; sourceTree = "<group>"; };
 		46160174778DD42C76098EB4 /* Pods_assassinGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assassinGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DD88AE1FCFB956C5D4639 /* Pods-assassinGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.debug.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.debug.xcconfig"; sourceTree = "<group>"; };
+		F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F298A689226002A60018E032 /* Tombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tombstone.swift; sourceTree = "<group>"; };
+		F298A68B226008760018E032 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F298A68D2260088D0018E032 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F298A68F226008A30018E032 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		F2E434F2225F054500461866 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		F2F173A5225EB1AB006D0F5B /* assassinGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assassinGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2F173AA225EB1AC006D0F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +58,6 @@
 				BD5DD88AE1FCFB956C5D4639 /* Pods-assassinGame.debug.xcconfig */,
 				320CEEBBCD4616113315522F /* Pods-assassinGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,25 @@
 				46160174778DD42C76098EB4 /* Pods_assassinGame.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2E434F0225F036400461866 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2E434F2225F054500461866 /* DatabaseController.swift */,
+				F298A689226002A60018E032 /* Tombstone.swift */,
+				F298A68B226008760018E032 /* Game.swift */,
+				F298A68D2260088D0018E032 /* Player.swift */,
+				F298A68F226008A30018E032 /* Snapshot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2E434F1225F038400461866 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F2F1739C225EB1AB006D0F5B = {
@@ -79,6 +109,9 @@
 		F2F173A7225EB1AB006D0F5B /* assassinGame */ = {
 			isa = PBXGroup;
 			children = (
+				F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */,
+				F2E434F1225F038400461866 /* Controllers */,
+				F2E434F0225F036400461866 /* Model */,
 				F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */,
 				F2F173AA225EB1AC006D0F5B /* ViewController.swift */,
 				F2F173AC225EB1AC006D0F5B /* Main.storyboard */,
@@ -150,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F173B3225EB1AE006D0F5B /* LaunchScreen.storyboard in Resources */,
+				F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */,
 				F2F173B0225EB1AE006D0F5B /* Assets.xcassets in Resources */,
 				F2F173AE225EB1AC006D0F5B /* Main.storyboard in Resources */,
 			);
@@ -222,7 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F173AB225EB1AC006D0F5B /* ViewController.swift in Sources */,
+				F298A68C226008760018E032 /* Game.swift in Sources */,
+				F298A68A226002A60018E032 /* Tombstone.swift in Sources */,
 				F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */,
+				F298A68E2260088D0018E032 /* Player.swift in Sources */,
+				F2E434F3225F054500461866 /* DatabaseController.swift in Sources */,
+				F298A690226008A30018E032 /* Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
