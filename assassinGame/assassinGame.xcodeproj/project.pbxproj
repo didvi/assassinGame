@@ -10,6 +10,8 @@
 		D5322629226921040026783B /* blood.png in Resources */ = {isa = PBXBuildFile; fileRef = D5322628226921040026783B /* blood.png */; };
 		D532262B226921DC0026783B /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D532262A226921DC0026783B /* target.png */; };
 		D532262D226926060026783B /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D532262C226926060026783B /* red.jpg */; };
+		D532262F226942F60026783B /* divi.png in Resources */ = {isa = PBXBuildFile; fileRef = D532262E226942F60026783B /* divi.png */; };
+		D53226312269447A0026783B /* WHITE.png in Resources */ = {isa = PBXBuildFile; fileRef = D53226302269447A0026783B /* WHITE.png */; };
 		E5C4CD287CCCD5278FE7E23F /* Pods_assassinGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46160174778DD42C76098EB4 /* Pods_assassinGame.framework */; };
 		F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */; };
 		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
@@ -31,6 +33,8 @@
 		D5322628226921040026783B /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../blood.png; sourceTree = "<group>"; };
 		D532262A226921DC0026783B /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../../target.png; sourceTree = "<group>"; };
 		D532262C226926060026783B /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = red.jpg; path = ../../../red.jpg; sourceTree = "<group>"; };
+		D532262E226942F60026783B /* divi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = divi.png; path = ../../../divi.png; sourceTree = "<group>"; };
+		D53226302269447A0026783B /* WHITE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WHITE.png; path = ../../../WHITE.png; sourceTree = "<group>"; };
 		F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F298A689226002A60018E032 /* Tombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tombstone.swift; sourceTree = "<group>"; };
 		F298A68B226008760018E032 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */,
 				F2F173AA225EB1AC006D0F5B /* ViewController.swift */,
 				F2F173AC225EB1AC006D0F5B /* Main.storyboard */,
+				D53226302269447A0026783B /* WHITE.png */,
+				D532262E226942F60026783B /* divi.png */,
 				D532262C226926060026783B /* red.jpg */,
 				D532262A226921DC0026783B /* target.png */,
 				D5322628226921040026783B /* blood.png */,
@@ -198,6 +204,8 @@
 				D532262D226926060026783B /* red.jpg in Resources */,
 				D5322629226921040026783B /* blood.png in Resources */,
 				F2F173AE225EB1AC006D0F5B /* Main.storyboard in Resources */,
+				D53226312269447A0026783B /* WHITE.png in Resources */,
+				D532262F226942F60026783B /* divi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
