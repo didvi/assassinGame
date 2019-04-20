@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5322629226921040026783B /* blood.png in Resources */ = {isa = PBXBuildFile; fileRef = D5322628226921040026783B /* blood.png */; };
-		D532262B226921DC0026783B /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D532262A226921DC0026783B /* target.png */; };
-		D532262D226926060026783B /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D532262C226926060026783B /* red.jpg */; };
-		D532262F226942F60026783B /* divi.png in Resources */ = {isa = PBXBuildFile; fileRef = D532262E226942F60026783B /* divi.png */; };
-		D53226312269447A0026783B /* WHITE.png in Resources */ = {isa = PBXBuildFile; fileRef = D53226302269447A0026783B /* WHITE.png */; };
 		E5C4CD287CCCD5278FE7E23F /* Pods_assassinGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46160174778DD42C76098EB4 /* Pods_assassinGame.framework */; };
 		F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */; };
 		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
@@ -30,11 +25,6 @@
 		320CEEBBCD4616113315522F /* Pods-assassinGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.release.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.release.xcconfig"; sourceTree = "<group>"; };
 		46160174778DD42C76098EB4 /* Pods_assassinGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assassinGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DD88AE1FCFB956C5D4639 /* Pods-assassinGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.debug.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.debug.xcconfig"; sourceTree = "<group>"; };
-		D5322628226921040026783B /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../blood.png; sourceTree = "<group>"; };
-		D532262A226921DC0026783B /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../../target.png; sourceTree = "<group>"; };
-		D532262C226926060026783B /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = red.jpg; path = ../../../red.jpg; sourceTree = "<group>"; };
-		D532262E226942F60026783B /* divi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = divi.png; path = ../../../divi.png; sourceTree = "<group>"; };
-		D53226302269447A0026783B /* WHITE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WHITE.png; path = ../../../WHITE.png; sourceTree = "<group>"; };
 		F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F298A689226002A60018E032 /* Tombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tombstone.swift; sourceTree = "<group>"; };
 		F298A68B226008760018E032 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -62,6 +52,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1988859D226BCEC70058F1F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2F173AA225EB1AC006D0F5B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1988859E226BCED00058F1F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2F173AC225EB1AC006D0F5B /* Main.storyboard */,
+				F2F173B1225EB1AE006D0F5B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3874B4BBBCAE33E729B28BE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +98,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F2E434F1225F038400461866 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		F2F1739C225EB1AB006D0F5B = {
 			isa = PBXGroup;
 			children = (
@@ -119,19 +119,12 @@
 		F2F173A7225EB1AB006D0F5B /* assassinGame */ = {
 			isa = PBXGroup;
 			children = (
+				1988859E226BCED00058F1F0 /* View */,
+				1988859D226BCEC70058F1F0 /* Controller */,
 				F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */,
-				F2E434F1225F038400461866 /* Controllers */,
 				F2E434F0225F036400461866 /* Model */,
 				F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */,
-				F2F173AA225EB1AC006D0F5B /* ViewController.swift */,
-				F2F173AC225EB1AC006D0F5B /* Main.storyboard */,
-				D53226302269447A0026783B /* WHITE.png */,
-				D532262E226942F60026783B /* divi.png */,
-				D532262C226926060026783B /* red.jpg */,
-				D532262A226921DC0026783B /* target.png */,
-				D5322628226921040026783B /* blood.png */,
 				F2F173AF225EB1AE006D0F5B /* Assets.xcassets */,
-				F2F173B1225EB1AE006D0F5B /* LaunchScreen.storyboard */,
 				F2F173B4225EB1AE006D0F5B /* Info.plist */,
 			);
 			path = assassinGame;
@@ -199,13 +192,8 @@
 			files = (
 				F2F173B3225EB1AE006D0F5B /* LaunchScreen.storyboard in Resources */,
 				F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */,
-				D532262B226921DC0026783B /* target.png in Resources */,
 				F2F173B0225EB1AE006D0F5B /* Assets.xcassets in Resources */,
-				D532262D226926060026783B /* red.jpg in Resources */,
-				D5322629226921040026783B /* blood.png in Resources */,
 				F2F173AE225EB1AC006D0F5B /* Main.storyboard in Resources */,
-				D53226312269447A0026783B /* WHITE.png in Resources */,
-				D532262F226942F60026783B /* divi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
