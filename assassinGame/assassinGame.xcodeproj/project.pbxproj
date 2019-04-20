@@ -7,33 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198885A2226BCFCA0058F1F0 /* CreateGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988859F226BCFC80058F1F0 /* CreateGameVC.swift */; };
+		198885A3226BCFCA0058F1F0 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A0226BCFC90058F1F0 /* DatabaseController.swift */; };
+		198885A4226BCFCA0058F1F0 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */; };
+		198885A9226BD02F0058F1F0 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A5226BD02C0058F1F0 /* Snapshot.swift */; };
+		198885AA226BD02F0058F1F0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A6226BD02D0058F1F0 /* Game.swift */; };
+		198885AB226BD02F0058F1F0 /* roomNumGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */; };
+		198885AC226BD02F0058F1F0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A8226BD02F0058F1F0 /* Player.swift */; };
 		E5C4CD287CCCD5278FE7E23F /* Pods_assassinGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46160174778DD42C76098EB4 /* Pods_assassinGame.framework */; };
 		F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */; };
 		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
-		F298A68C226008760018E032 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68B226008760018E032 /* Game.swift */; };
-		F298A68E2260088D0018E032 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68D2260088D0018E032 /* Player.swift */; };
-		F298A690226008A30018E032 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A68F226008A30018E032 /* Snapshot.swift */; };
-		F2E434F3225F054500461866 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E434F2225F054500461866 /* DatabaseController.swift */; };
 		F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */; };
-		F2F173AB225EB1AC006D0F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F173AA225EB1AC006D0F5B /* ViewController.swift */; };
 		F2F173AE225EB1AC006D0F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F173AC225EB1AC006D0F5B /* Main.storyboard */; };
 		F2F173B0225EB1AE006D0F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F173AF225EB1AE006D0F5B /* Assets.xcassets */; };
 		F2F173B3225EB1AE006D0F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F173B1225EB1AE006D0F5B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1988859F226BCFC80058F1F0 /* CreateGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameVC.swift; sourceTree = "<group>"; };
+		198885A0226BCFC90058F1F0 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		198885A5226BD02C0058F1F0 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		198885A6226BD02D0058F1F0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roomNumGenerator.swift; sourceTree = "<group>"; };
+		198885A8226BD02F0058F1F0 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		320CEEBBCD4616113315522F /* Pods-assassinGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.release.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.release.xcconfig"; sourceTree = "<group>"; };
 		46160174778DD42C76098EB4 /* Pods_assassinGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assassinGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DD88AE1FCFB956C5D4639 /* Pods-assassinGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.debug.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F298A689226002A60018E032 /* Tombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tombstone.swift; sourceTree = "<group>"; };
-		F298A68B226008760018E032 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		F298A68D2260088D0018E032 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		F298A68F226008A30018E032 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
-		F2E434F2225F054500461866 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		F2F173A5225EB1AB006D0F5B /* assassinGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assassinGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2F173AA225EB1AC006D0F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2F173AD225EB1AC006D0F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2F173AF225EB1AE006D0F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2F173B2225EB1AE006D0F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 		1988859D226BCEC70058F1F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F2F173AA225EB1AC006D0F5B /* ViewController.swift */,
+				1988859F226BCFC80058F1F0 /* CreateGameVC.swift */,
+				198885A0226BCFC90058F1F0 /* DatabaseController.swift */,
+				198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,11 +95,11 @@
 		F2E434F0225F036400461866 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F2E434F2225F054500461866 /* DatabaseController.swift */,
+				198885A6226BD02D0058F1F0 /* Game.swift */,
+				198885A8226BD02F0058F1F0 /* Player.swift */,
+				198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */,
+				198885A5226BD02C0058F1F0 /* Snapshot.swift */,
 				F298A689226002A60018E032 /* Tombstone.swift */,
-				F298A68B226008760018E032 /* Game.swift */,
-				F298A68D2260088D0018E032 /* Player.swift */,
-				F298A68F226008A30018E032 /* Snapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-assassinGame/Pods-assassinGame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -244,6 +251,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -263,13 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2F173AB225EB1AC006D0F5B /* ViewController.swift in Sources */,
-				F298A68C226008760018E032 /* Game.swift in Sources */,
+				198885A4226BCFCA0058F1F0 /* MainScreenVC.swift in Sources */,
 				F298A68A226002A60018E032 /* Tombstone.swift in Sources */,
+				198885AA226BD02F0058F1F0 /* Game.swift in Sources */,
 				F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */,
-				F298A68E2260088D0018E032 /* Player.swift in Sources */,
-				F2E434F3225F054500461866 /* DatabaseController.swift in Sources */,
-				F298A690226008A30018E032 /* Snapshot.swift in Sources */,
+				198885A9226BD02F0058F1F0 /* Snapshot.swift in Sources */,
+				198885AB226BD02F0058F1F0 /* roomNumGenerator.swift in Sources */,
+				198885A3226BCFCA0058F1F0 /* DatabaseController.swift in Sources */,
+				198885AC226BD02F0058F1F0 /* Player.swift in Sources */,
+				198885A2226BCFCA0058F1F0 /* CreateGameVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
