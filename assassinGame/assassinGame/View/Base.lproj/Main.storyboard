@@ -72,6 +72,10 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="joinGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="To9-nE-c2O"/>
+                                    <segue destination="yJQ-SS-k63" kind="show" identifier="joinGameSegue" id="ft3-Dl-XvK"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blood" translatesAutoresizingMaskIntoConstraints="NO" id="p8c-ws-y6G">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
@@ -183,6 +187,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createRoom:" destination="ITQ-1J-g4O" eventType="touchUpInside" id="7aY-JP-ans"/>
+                                    <segue destination="02B-Ki-VKQ" kind="show" identifier="createToWaitingSegue" id="UmP-Y5-aaa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m00-2r-X8Y">
@@ -296,7 +301,6 @@
                         <outlet property="imageToUpload" destination="0Hb-Xy-iTV" id="y73-Rd-3PS"/>
                         <outlet property="nameField" destination="DXb-Am-mcS" id="apK-9r-tep"/>
                         <outlet property="numOfPlayers" destination="tlo-i6-tuX" id="33M-nH-Ioy"/>
-                        <segue destination="02B-Ki-VKQ" kind="show" id="1jh-UJ-jdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLk-RJ-aiW" sceneMemberID="firstResponder"/>
@@ -446,18 +450,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcx-9b-2Hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.8000000000002" y="-1287.7061469265368"/>
+            <point key="canvasLocation" x="3625" y="-1132"/>
         </scene>
         <!--JoinGame-->
         <scene sceneID="HyD-8e-mbN">
             <objects>
-                <viewController title="JoinGame" id="yJQ-SS-k63" customClass="ViewController" customModule="assassinGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JoinGame" id="yJQ-SS-k63" customClass="JoinGameVC" customModule="assassinGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rub-bX-Toi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acu-ec-1eh">
-                                <rect key="frame" x="119" y="493" width="137" height="67"/>
+                                <rect key="frame" x="119" y="545" width="137" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="JoinRoom"/>
@@ -471,9 +475,13 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="joinGame:" destination="yJQ-SS-k63" eventType="touchUpInside" id="GQU-UC-6ec"/>
+                                    <segue destination="W3O-bX-w00" kind="show" identifier="joinToWaitSegue" id="8rM-xb-hD2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33M-Ca-xAv">
-                                <rect key="frame" x="63" y="86" width="245" height="68"/>
+                                <rect key="frame" x="67" y="66" width="245" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="WHATS YOUR NAME?">
@@ -487,7 +495,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jg-c8-iUz">
-                                <rect key="frame" x="63" y="200" width="261" height="68"/>
+                                <rect key="frame" x="63" y="167" width="261" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="UPLOAD YOUR PHOTO">
@@ -501,7 +509,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zj4-FC-tpm">
-                                <rect key="frame" x="63" y="328" width="261" height="68"/>
+                                <rect key="frame" x="63" y="430" width="261" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="ENTER ROOM NUMBER">
@@ -515,21 +523,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14N-bQ-yGL">
-                                <rect key="frame" x="94" y="147" width="183" height="30"/>
+                                <rect key="frame" x="97" y="129" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRm-7m-DRK">
-                                <rect key="frame" x="94" y="393" width="183" height="30"/>
+                                <rect key="frame" x="102" y="492" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="Ymb-En-cKk">
+                                <rect key="frame" x="-1" y="609" width="376" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="az3-jd-Izh">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y82-9s-h3H">
+                                <rect key="frame" x="124" y="243" width="137" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGF-Zx-hpp">
-                                <rect key="frame" x="142" y="260" width="91" height="60"/>
+                                <rect key="frame" x="102" y="379" width="175" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="UploadPhoto"/>
@@ -543,21 +563,18 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="importImage:" destination="yJQ-SS-k63" eventType="touchUpInside" id="Ylw-be-AgU"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="Ymb-En-cKk">
-                                <rect key="frame" x="-1" y="609" width="376" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="az3-jd-Izh">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.13897879460000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TgW-FQ-EKG"/>
                     </view>
                     <connections>
-                        <segue destination="W3O-bX-w00" kind="show" id="GmT-2v-aMT"/>
+                        <outlet property="nameInput" destination="14N-bQ-yGL" id="SNV-5J-lBD"/>
+                        <outlet property="playerPhoto" destination="Y82-9s-h3H" id="keo-vJ-whb"/>
+                        <outlet property="roomNumberInput" destination="tRm-7m-DRK" id="g2h-YV-5dN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="822-iB-Znq" sceneMemberID="firstResponder"/>
@@ -770,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGc-K6-83G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.8000000000002" y="-570.76461769115451"/>
+            <point key="canvasLocation" x="3625" y="-390"/>
         </scene>
         <!--WeaponScreen-->
         <scene sceneID="IgS-6f-KZe">
@@ -786,7 +803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K2-Aw-HKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3625" y="798"/>
+            <point key="canvasLocation" x="3625" y="1087"/>
         </scene>
         <!--Target-->
         <scene sceneID="8hl-Dr-hPa">
@@ -842,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0F-or-RGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.8000000000002" y="113.79310344827587"/>
+            <point key="canvasLocation" x="3625" y="343"/>
         </scene>
         <!--LoseScreen-->
         <scene sceneID="sdl-MU-ayE">

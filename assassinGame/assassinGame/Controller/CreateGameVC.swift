@@ -54,6 +54,8 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         
         addGame(game)
         addPlayer(game.roomNumber, creator)
+        
+        performSegue(withIdentifier: "createToWaitingSegue", sender: nil)
     }
     
 }

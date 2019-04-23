@@ -14,6 +14,7 @@
 		198885AA226BD02F0058F1F0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A6226BD02D0058F1F0 /* Game.swift */; };
 		198885AB226BD02F0058F1F0 /* roomNumGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */; };
 		198885AC226BD02F0058F1F0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A8226BD02F0058F1F0 /* Player.swift */; };
+		199D4C17226F8EA100281733 /* JoinGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199D4C16226F8EA100281733 /* JoinGameVC.swift */; };
 		E5C4CD287CCCD5278FE7E23F /* Pods_assassinGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46160174778DD42C76098EB4 /* Pods_assassinGame.framework */; };
 		F28046CA225F0F1300CA4C2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28046C9225F0F1300CA4C2A /* GoogleService-Info.plist */; };
 		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
@@ -31,6 +32,7 @@
 		198885A6226BD02D0058F1F0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roomNumGenerator.swift; sourceTree = "<group>"; };
 		198885A8226BD02F0058F1F0 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		199D4C16226F8EA100281733 /* JoinGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGameVC.swift; sourceTree = "<group>"; };
 		320CEEBBCD4616113315522F /* Pods-assassinGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.release.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.release.xcconfig"; sourceTree = "<group>"; };
 		46160174778DD42C76098EB4 /* Pods_assassinGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_assassinGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DD88AE1FCFB956C5D4639 /* Pods-assassinGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-assassinGame.debug.xcconfig"; path = "Target Support Files/Pods-assassinGame/Pods-assassinGame.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1988859F226BCFC80058F1F0 /* CreateGameVC.swift */,
+				199D4C16226F8EA100281733 /* JoinGameVC.swift */,
 				198885A0226BCFC90058F1F0 /* DatabaseController.swift */,
 				198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */,
 			);
@@ -277,6 +280,7 @@
 				F298A68A226002A60018E032 /* Tombstone.swift in Sources */,
 				198885AA226BD02F0058F1F0 /* Game.swift in Sources */,
 				F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */,
+				199D4C17226F8EA100281733 /* JoinGameVC.swift in Sources */,
 				198885A9226BD02F0058F1F0 /* Snapshot.swift in Sources */,
 				198885AB226BD02F0058F1F0 /* roomNumGenerator.swift in Sources */,
 				198885A3226BCFCA0058F1F0 /* DatabaseController.swift in Sources */,

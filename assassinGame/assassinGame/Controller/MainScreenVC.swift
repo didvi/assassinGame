@@ -19,6 +19,11 @@ class MainScreenVC: UIViewController {
         performSegue(withIdentifier: "toCreateGame", sender: nil)
     }
     
+    @IBAction func joinGame(_ sender: Any) {
+        performSegue(withIdentifier: "joinGameSegue", sender: nil)
+    }
+    
+    
 
  
     
