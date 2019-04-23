@@ -12,18 +12,13 @@ class MainScreenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let testGame = Game(5, 2546)
-//        assassinGame.addGame(testGame)
-//        let testPlayer = Player("Bob Dylan")
-//        assassinGame.addPlayer(2546, testPlayer)
-//        assassinGame.removePlayer(2546, testPlayer)
-        
-        
-
     }    
     
     
-
+    @IBAction func createGameButton(_ sender: Any) {
+        performSegue(withIdentifier: "toCreateGame", sender: nil)
+    }
+    
 
  
     

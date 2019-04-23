@@ -18,6 +18,7 @@ class Game {
     let timeLeft: Date
     let graveyard:[Tombstone]
     let snapshots:[String]
+    var phoneToPlayer: [String:String]
     
     init(_ playersNeeded:Int) {
         self.roomNumber = roomNumGenerator.generateRoomNumber()
@@ -26,6 +27,7 @@ class Game {
         self.players = [Player]()
         self.graveyard = [Tombstone]()
         self.snapshots = [String]()
+        self.phoneToPlayer = [String:String]()
     }
     
     func addPlayer(_ player: Player) {

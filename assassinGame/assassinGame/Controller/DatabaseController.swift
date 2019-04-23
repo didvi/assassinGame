@@ -9,11 +9,12 @@
 import Foundation
 import Firebase
 import MapKit
+import Kingfisher
 
 let db = Firestore.firestore()
 
 func addGame(_ game: Game) {
-    let gameRef = db.collection("games").document(String(game.roomNumber))
+    let gameRef =  db.collection("games").document(String(game.roomNumber))
     
     
     gameRef.setData([
@@ -30,8 +31,6 @@ func addGame(_ game: Game) {
 
 func addPlayer(_ roomNumber: Int, _ player: Player) {
     
-    
-    
     // adds player to the game with correct room number to firestore
     
     let gameRef = db.collection("games").document(String(roomNumber))
@@ -47,24 +46,41 @@ func addPlayer(_ roomNumber: Int, _ player: Player) {
         }
     }
     
-//    // adds player's image to Storage ~~~~~~~~~~~~~
-//
-//    // points to the root reference
-//    FirebaseApp.configure()
-//    let storageRef = Storage.storage().reference()
-//
-//    // points to "2545"
-//    let roomRef = storageRef.child(String(roomNumber))
-//
-//    // points to "2545/Bob Dylan.png"
-//    let fileName = String(player.name) + ".png"
-//    let photoRef = roomRef.child(fileName)
-//
-//    // File path is "2545/Bob Dylan.png"
-//    let path = photoRef.fullPath
     
+    // adds the player to the phone to player dictionary
+    let deviceID = UIDevice.current.identifierForVendor?.uuidString // gets phone ID
     
+    gameRef.collection("phoneToPlayers").document(deviceID!).setData(["name" : player.name]) { err in
+        if let err = err {
+            print("Error writing document: \(err)")
+        } else {
+            print("Document successfully written!")
+        }
+    }
     
+
+
+    // adds player's image to Storage ~~~~~~~~~~~~~
+
+    // converts a player's UIImage to data
+    let pngData = player.image.pngData()
+    
+    // points to the root reference
+    let storageRef = Storage.storage().reference()
+
+    // points to "2545"
+    let roomRef = storageRef.child(String(roomNumber))
+
+    // points to "2545/Bob Dylan.png"
+    let fileName = String(player.name) + ".png"
+    let photoRef = roomRef.child(fileName)
+
+    // uploads the png data to the correct storage location
+    photoRef.putData(pngData!, metadata: nil) { (metadata, err) in
+        if err != nil {
+            print("didn't upload bro")
+        }
+    }
     
     
     // subtracts one from 'players needed'

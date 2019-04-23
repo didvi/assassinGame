@@ -11,14 +11,16 @@ import Firebase
 
 class Player {
 
-    let name:String;
-    var won_game:Bool;
-    var alive:Bool;
+    let name:String
+    var won_game:Bool
+    var alive:Bool
+    let image:UIImage
     
-    init(_ name:String) {
+    init(_ name:String, _ image:UIImage) {
 
         self.won_game = false;
         self.alive = true;
         self.name = name;
+        self.image = image
     }
 }

@@ -49,9 +49,11 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         let playerCount = Int(numOfPlayers!.text!)
         let game = Game(playerCount!)
         
-        let creator = Player(nameField.text!)
+        let creator = Player(nameField.text!, (imageToUpload?.image)!)
         game.addPlayer(creator)
         
+        addGame(game)
+        addPlayer(game.roomNumber, creator)
     }
     
 }
