@@ -40,32 +40,31 @@ class JoinGameVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     }
     
     @IBAction func joinGame(_ sender: Any) {
-        
+    
         let gameRef = db.collection("games").document(roomNumberInput.text!)
         
-        // checks to see if room exists, alerts if it does not
-        
         gameRef.getDocument { (document, error) in
-            // if the room doesn't exist, send alert
-            if let document = document, !document.exists {
+            
+            if let document = document, document.exists {
+                let player = Player(self.nameInput.text!, self.playerPhoto.image!)
+                addPlayer(Int(self.roomNumberInput.text!)!, player)
+                self.performSegue(withIdentifier: "joinToWaitSegue", sender: nil)
+            } else {
                 let alert = UIAlertController(title: "Oh no!", message: "That room doesn't exist.", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
-            // if the room does exist, add the player and perform segue to waiting room
-            else {
-                let player = Player(self.nameInput.text!, self.playerPhoto.image!)
-                addPlayer(Int(self.roomNumberInput.text!)!, player)
-                self.performSegue(withIdentifier: "joinToWaitSegue", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "joinToWaitSegue" {
+                if let dest = segue.destination as? WaitingVC {
+                    dest.roomNumber = roomNumberInput.text!
+                }
             }
         }
-        
-        // if it does, add player to the game!
-        
-        
-        
-        
-        
     }
     
     

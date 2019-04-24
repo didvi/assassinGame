@@ -14,8 +14,8 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBOutlet var imageToUpload: UIImageView?
     @IBOutlet var numOfPlayers: UILabel!
     @IBOutlet var nameField: UITextField!
+    var game: Game!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         imageToUpload?.image = UIImage(named: "blank")
@@ -29,6 +29,7 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         image.allowsEditing = false
         self.present(image, animated: true)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.imageToUpload!.image = image
@@ -47,7 +48,7 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBAction func createRoom(_ sender: Any) {
         
         let playerCount = Int(numOfPlayers!.text!)
-        let game = Game(playerCount!)
+        game = Game(playerCount!)
         
         let creator = Player(nameField.text!, (imageToUpload?.image)!)
         game.addPlayer(creator)
@@ -57,5 +58,18 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         
         performSegue(withIdentifier: "createToWaitingSegue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "createToWaitingSegue" {
+                if let dest = segue.destination as? WaitingVC {
+                    dest.roomNumber = String(game.roomNumber)
+                }
+            }
+        }
+    }
+
+    
+    
     
 }
