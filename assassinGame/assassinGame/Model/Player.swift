@@ -10,15 +10,17 @@ import Foundation
 import Firebase
 
 class Player {
-    var id: DocumentReference;
-    let name:String;
-    var won_game:Bool;
-    var alive:Bool;
+
+    let name:String
+    var won_game:Bool
+    var alive:Bool
+    let image:UIImage
     
-    init(_ name:String, _ game_id:DocumentReference) {
-        self.id = game_id.collection("players").document();
+    init(_ name:String, _ image:UIImage) {
+
         self.won_game = false;
         self.alive = true;
         self.name = name;
+        self.image = image
     }
 }

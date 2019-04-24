@@ -11,6 +11,7 @@ import Firebase
 import UIKit
 
 class Snapshot {
+    
     let id: DocumentReference;
     let photo: UIImage;
     let photoString: String;
