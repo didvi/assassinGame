@@ -37,10 +37,10 @@ class WaitingVC: UIViewController {
                     print("Document data was empty.")
                     return
                 }
-                print("Current data: \(data)")
                 self.numPlayersNeeded.text = String(data["playerCount"] as! Int)
-            
-                
+                if (self.numPlayersNeeded.text == "0") {
+                    self.performSegue(withIdentifier: "waitingToGame", sender: nil)
+                }
         }
     }
     

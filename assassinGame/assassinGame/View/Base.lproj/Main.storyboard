@@ -471,6 +471,7 @@
                     <connections>
                         <outlet property="numPlayersNeeded" destination="YoT-h6-Wys" id="4UE-81-hfl"/>
                         <outlet property="roomNumberLabel" destination="fes-kX-Ial" id="YKA-bp-Dy9"/>
+                        <segue destination="22U-tq-Dil" kind="show" identifier="waitingToGame" id="SVu-KW-uoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neU-Ra-UEX" sceneMemberID="firstResponder"/>
