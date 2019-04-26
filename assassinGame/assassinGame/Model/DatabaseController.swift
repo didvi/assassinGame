@@ -46,7 +46,6 @@ func addPlayer(_ roomNumber: Int, _ player: Player) {
         }
     }
     
-    
     // adds the player to the phone to player dictionary
     let deviceID = UIDevice.current.identifierForVendor?.uuidString // gets phone ID
     
@@ -57,8 +56,6 @@ func addPlayer(_ roomNumber: Int, _ player: Player) {
             print("Document successfully written!")
         }
     }
-    
-
 
     // adds player's image to Storage ~~~~~~~~~~~~~
 
@@ -103,7 +100,6 @@ func addPlayer(_ roomNumber: Int, _ player: Player) {
     
     
 }
-
 
 func removePlayer (_ roomNumber: Int, _ player: Player) {
     

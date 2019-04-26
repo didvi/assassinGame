@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198324DF22706005008D8CD8 /* WaitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198324DE22706005008D8CD8 /* WaitingVC.swift */; };
 		198885A2226BCFCA0058F1F0 /* CreateGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988859F226BCFC80058F1F0 /* CreateGameVC.swift */; };
 		198885A3226BCFCA0058F1F0 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A0226BCFC90058F1F0 /* DatabaseController.swift */; };
 		198885A4226BCFCA0058F1F0 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		198324DE22706005008D8CD8 /* WaitingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingVC.swift; sourceTree = "<group>"; };
 		1988859F226BCFC80058F1F0 /* CreateGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameVC.swift; sourceTree = "<group>"; };
 		198885A0226BCFC90058F1F0 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
@@ -62,8 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				1988859F226BCFC80058F1F0 /* CreateGameVC.swift */,
+				198324DE22706005008D8CD8 /* WaitingVC.swift */,
 				199D4C16226F8EA100281733 /* JoinGameVC.swift */,
-				198885A0226BCFC90058F1F0 /* DatabaseController.swift */,
 				198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */,
 			);
 			path = Controller;
@@ -98,6 +100,7 @@
 		F2E434F0225F036400461866 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				198885A0226BCFC90058F1F0 /* DatabaseController.swift */,
 				198885A6226BD02D0058F1F0 /* Game.swift */,
 				198885A8226BD02F0058F1F0 /* Player.swift */,
 				198885A7226BD02E0058F1F0 /* roomNumGenerator.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				198885A4226BCFCA0058F1F0 /* MainScreenVC.swift in Sources */,
 				F298A68A226002A60018E032 /* Tombstone.swift in Sources */,
+				198324DF22706005008D8CD8 /* WaitingVC.swift in Sources */,
 				198885AA226BD02F0058F1F0 /* Game.swift in Sources */,
 				F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */,
 				199D4C17226F8EA100281733 /* JoinGameVC.swift in Sources */,
