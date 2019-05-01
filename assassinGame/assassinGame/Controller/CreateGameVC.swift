@@ -63,7 +63,8 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         if let identifier = segue.identifier {
             if identifier == "createToWaitingSegue" {
                 if let dest = segue.destination as? WaitingVC {
-                    dest.roomNumber = String(game.roomNumber)
+                    dest.game = game;
+                    dest.roomNumber = String(game.roomNumber);
                 }
             }
         }

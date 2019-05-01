@@ -15,8 +15,8 @@ class WaitingVC: UIViewController {
     @IBOutlet var roomNumberLabel: UILabel!
     @IBOutlet var numPlayersNeeded: UILabel!
     var roomNumber: String? = nil
-    
-    
+    var game: Game!;
+
     override func viewDidLoad() {
         super.viewDidLoad()
         roomNumberLabel.text = roomNumber
@@ -44,7 +44,15 @@ class WaitingVC: UIViewController {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "waitingToGame" {
+                if let dest = segue.destination as? TabBarVC {
+                    dest.game = game
+                }
+            }
+        }
+    }
     
     
 

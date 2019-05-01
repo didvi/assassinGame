@@ -126,6 +126,24 @@ func removePlayer (_ roomNumber: Int, _ player: Player) {
 }
 
 
+func getPlayerName(_ roomNumber:Int) -> String {
+    let deviceID = UIDevice.current.identifierForVendor?.uuidString // gets phone IDd
+    var name = "";
+    
+    let playerToId = db.collection("games").document(String(roomNumber)).collection("phoneToPlayers").document(deviceID!)
+    playerToId.getDocument { (document, error) in
+        if let document = document, document.exists {
+            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+            print("Document data: \(dataDescription)")
+            
+            // retrieve player name from device id
+            name = document.data()? ["name"] as! String;
+        } else {
+            print("Document does not exist")
+        }
+    }
+    return name
+}
 
 
 
