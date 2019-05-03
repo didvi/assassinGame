@@ -21,7 +21,6 @@
 		F29671D72279665400F85D6B /* GraveyardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29671D62279665400F85D6B /* GraveyardViewController.swift */; };
 		F29671D9227968D600F85D6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29671D8227968D600F85D6B /* CoreLocation.framework */; };
 		F29671DB2279761600F85D6B /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29671DA2279761600F85D6B /* TabBarVC.swift */; };
-		F29671DF22797CDB00F85D6B /* TargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29671DE22797CDB00F85D6B /* TargetVC.swift */; };
 		F29671E12279855400F85D6B /* WeaponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29671E02279855400F85D6B /* WeaponVC.swift */; };
 		F298A68A226002A60018E032 /* Tombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298A689226002A60018E032 /* Tombstone.swift */; };
 		F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F173A8225EB1AB006D0F5B /* AppDelegate.swift */; };
@@ -47,7 +46,6 @@
 		F29671D62279665400F85D6B /* GraveyardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraveyardViewController.swift; sourceTree = "<group>"; };
 		F29671D8227968D600F85D6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F29671DA2279761600F85D6B /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
-		F29671DE22797CDB00F85D6B /* TargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetVC.swift; sourceTree = "<group>"; };
 		F29671E02279855400F85D6B /* WeaponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponVC.swift; sourceTree = "<group>"; };
 		F298A689226002A60018E032 /* Tombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tombstone.swift; sourceTree = "<group>"; };
 		F2F173A5225EB1AB006D0F5B /* assassinGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assassinGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +79,6 @@
 				199D4C16226F8EA100281733 /* JoinGameVC.swift */,
 				198885A1226BCFCA0058F1F0 /* MainScreenVC.swift */,
 				F29671D62279665400F85D6B /* GraveyardViewController.swift */,
-				F29671DE22797CDB00F85D6B /* TargetVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,7 +295,6 @@
 				F29671D72279665400F85D6B /* GraveyardViewController.swift in Sources */,
 				198885A4226BCFCA0058F1F0 /* MainScreenVC.swift in Sources */,
 				F298A68A226002A60018E032 /* Tombstone.swift in Sources */,
-				F29671DF22797CDB00F85D6B /* TargetVC.swift in Sources */,
 				198324DF22706005008D8CD8 /* WaitingVC.swift in Sources */,
 				198885AA226BD02F0058F1F0 /* Game.swift in Sources */,
 				F2F173A9225EB1AB006D0F5B /* AppDelegate.swift in Sources */,
@@ -457,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCZW68VAT;
 				INFOPLIST_FILE = assassinGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCZW68VAT;
 				INFOPLIST_FILE = assassinGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

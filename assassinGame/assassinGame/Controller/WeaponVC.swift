@@ -8,12 +8,18 @@
 
 import UIKit
 
-class WeaponVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class WeaponVC: UIViewController {
 // has preliminary logic- will bring up the camera when the button is clicked and can take a photo, however is not stored in the game or sent off to be verified- need to add another verification popup to ensure the user wants to send that photo or if they want to take a new one
+    
+    var game: Game!;
+    var player: Player!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if (game != nil) {
+            player = game!.getPlayer();
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -27,23 +33,5 @@ class WeaponVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 //        self.present(picker, animated: true, completion: nil);
 //    }
 
-    @IBAction func cameraButtonPressed(_ sender: UIButton) {
-        let picker = UIImagePickerController();
-        picker.delegate = self;
-        picker.sourceType = .camera;
-        self.present(picker, animated: true, completion: nil);
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let img: UIImage;
-        img = info[.originalImage] as! UIImage;
-        imageView.image = img;
-        
-        dismiss(animated: true, completion: nil);
-    }
-    
-    func saveImage(_ img: UIImage) {
-        
-    }
 
 }

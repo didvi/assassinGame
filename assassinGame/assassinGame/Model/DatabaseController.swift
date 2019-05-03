@@ -18,6 +18,7 @@ func addGame(_ game: Game) {
     
     
     gameRef.setData([
+        "totalPlayers": game.playerCount,
         "playerCount": game.playerCount,
         "timeLeft": game.timeLeft.description
     ]) { err in
@@ -145,6 +146,77 @@ func getPlayerName(_ roomNumber:Int) -> String {
     return name
 }
 
+
+//TODO: test if works, maybe change structure
+func addKillshot(_ roomNumber:Int, _ killer: Player,_ img: UIImage) {
+    // adds player's killshot to Storage ~~~~~~~~~~~~~
+    
+    // converts a player's UIImage to data
+    let pngData = img.pngData()
+    
+    // points to the root reference
+    let storageRef = Storage.storage().reference()
+    
+    // points to "2545"
+    let roomRef = storageRef.child(String(roomNumber))
+    
+    // points to "2545/killshot/"
+    let killshotRef = roomRef.child("killshot")
+    
+    // points to "2545/killshot/Bob Dylan.png"
+    let fileName = String(killer.target!.name) + ".png"
+    let photoRef = killshotRef.child(fileName)
+    
+    // uploads the png data to the correct storage location
+    photoRef.putData(pngData!, metadata: nil) { (metadata, err) in
+        if err != nil {
+            print("didn't upload bro")
+        }
+    }
+    
+    
+    // adds killshot to the killshots collection, with the target name as the id
+    let gameRef = db.collection("games").document(String(roomNumber))
+    
+    gameRef.getDocument { (document, error) in
+        if let document = document, document.exists {
+            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+            print("Document data: \(dataDescription)")
+            
+            // gets number of players in game
+            let totalPlayers = document.data()? ["totalPlayers"] as! Int
+            let confirmationsNeeded = min(totalPlayers, 3);
+            
+            gameRef.collection("unconfirmedKillshots").document(killer.target!.name).setData([
+                "confirmationsNeeded" : confirmationsNeeded,
+                "denialsNeeded": confirmationsNeeded,
+                "assassin": killer.name
+            ]) { err in if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+                }
+            }
+            
+        } else {
+            print("Document does not exist")
+            
+        }
+    }
+    
+}
+
+//TODO: implement this
+func canTakeKillshot(_ player: Player) -> Bool {
+    return false;
+}
+
+// should be called whenever a killshot is confirmed or denied
+// if confirmations needed or denials needed is at 0, then the killshot should be removed
+// player should also be removed if confirmations is at 0
+func checkKillshotStatus(_ targetName: String) -> Bool {
+    return false;
+}
 
 
 //func addTombstone(_ t:Tombstone) {

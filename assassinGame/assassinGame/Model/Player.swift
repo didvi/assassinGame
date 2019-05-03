@@ -16,20 +16,24 @@ class Player {
     var alive:Bool
     let image:UIImage
     
-    let playerId: String
-    var target: Player;
+    let playerId: String?
+    var target: Player?;
     
     
     // dummy player just to avoid errors idk how to handle -> see getPlayer in Game
-    init() {
+    init(_ name:String) {
         self.won_game = false;
         self.alive = true;
-        self.name = "name";
-        self.image = UIImage(named: "image");
+        self.name = name;
+        self.image = UIImage();
         
         if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-            self.playerId = "uuid"
+            self.playerId = uuid
+        } else {
+            self.playerId = nil;
         }
+        
+        self.target = nil;
     }
     
     init(_ name:String, _ image:UIImage) {
@@ -40,6 +44,10 @@ class Player {
         
         if let uuid = UIDevice.current.identifierForVendor?.uuidString {
             self.playerId = uuid
+        } else {
+            self.playerId = nil;
         }
+        
+        self.target = nil;
     }
 }

@@ -65,6 +65,7 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
                 if let dest = segue.destination as? WaitingVC {
                     dest.game = game;
                     dest.roomNumber = String(game.roomNumber);
+                    dest.name = nameField.text;
                 }
             }
         }
