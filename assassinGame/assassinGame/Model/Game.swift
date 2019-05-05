@@ -56,6 +56,12 @@ class Game {
     
     func assignTargets() {
         players.shuffle()
+        
+        if (players.count == 2) {
+            players[0].target = players[1]
+            players[1].target = players[0]
+            return;
+        }
         for i in 0...players.count - 2 {
             players[i].target = players[i + 1];
         }

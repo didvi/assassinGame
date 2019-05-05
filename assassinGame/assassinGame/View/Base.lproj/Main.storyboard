@@ -18,27 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBV-Eq-ODw">
-                                <rect key="frame" x="98" y="150" width="178" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBV-Eq-ODw">
+                                <rect key="frame" x="83" y="173" width="209.5" height="48.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="ASSASSIN">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="30" name="Cochin"/>
+                                            <font key="NSFont" size="42" name="Cochin"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="RGG-M2-48M">
-                                <rect key="frame" x="142" y="228" width="91" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="RGG-M2-48M">
+                                <rect key="frame" x="100" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="P7A-NF-Tnz"/>
+                                    <constraint firstAttribute="height" constant="80" id="vyA-pQ-dPY"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qs-CE-CT7">
-                                <rect key="frame" x="114" y="346" width="146" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qs-CE-CT7">
+                                <rect key="frame" x="120" y="360.5" width="135" height="32.5"/>
                                 <color key="backgroundColor" white="0.13897879464285715" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CreateGame"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,9 +57,11 @@
                                     <segue destination="ITQ-1J-g4O" kind="show" identifier="toCreateGame" id="RP3-Iz-gzr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AW-Ek-CUS">
-                                <rect key="frame" x="114" y="415" width="146" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blood" translatesAutoresizingMaskIntoConstraints="NO" id="p8c-ws-y6G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AW-Ek-CUS">
+                                <rect key="frame" x="117" y="430" width="141" height="33"/>
                                 <color key="backgroundColor" white="0.13897879460000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CreateGame"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,15 +80,21 @@
                                     <segue destination="yJQ-SS-k63" kind="show" identifier="joinGameSegue" id="ft3-Dl-XvK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blood" translatesAutoresizingMaskIntoConstraints="NO" id="p8c-ws-y6G">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2qs-CE-CT7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="43" id="2sa-b9-mmZ"/>
+                            <constraint firstItem="p8c-ws-y6G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3X6-62-vkz"/>
+                            <constraint firstItem="9AW-Ek-CUS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="112" id="7HV-00-SE3"/>
+                            <constraint firstItem="RGG-M2-48M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-63" id="D2t-dY-Sqr"/>
+                            <constraint firstItem="9AW-Ek-CUS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ee5-He-xsd"/>
+                            <constraint firstItem="RGG-M2-48M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LEz-OL-Out"/>
+                            <constraint firstItem="KBV-Eq-ODw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Roo-09-nsg"/>
                             <constraint firstItem="p8c-ws-y6G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sc3-YD-usN"/>
+                            <constraint firstItem="KBV-Eq-ODw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-136.25" id="bOU-OT-SL7"/>
                             <constraint firstItem="p8c-ws-y6G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lt5-Sy-AAm"/>
                             <constraint firstItem="p8c-ws-y6G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uBl-Pc-oIc"/>
+                            <constraint firstItem="2qs-CE-CT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yU4-tU-hCJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -186,7 +195,7 @@
         <scene sceneID="19s-lR-yqZ">
             <objects>
                 <viewController title="CreateGame" id="ITQ-1J-g4O" customClass="CreateGameVC" customModule="assassinGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="j8e-s9-FKs">
+                    <view key="view" contentMode="scaleToFill" id="j8e-s9-FKs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -265,7 +274,7 @@
                                 </attributedString>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="qzY-Tw-Hau">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="qzY-Tw-Hau">
                                 <rect key="frame" x="0.0" y="605" width="375" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="AT8-Nn-Rhz"/>
@@ -310,7 +319,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Hb-Xy-iTV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Hb-Xy-iTV">
                                 <rect key="frame" x="132" y="227.5" width="116" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="2MR-N0-WM8"/>
