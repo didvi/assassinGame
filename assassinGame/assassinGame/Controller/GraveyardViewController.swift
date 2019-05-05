@@ -22,6 +22,10 @@ class GraveyardViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest;
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        
+        // needs to get locations from database
+        // then calls add annotation on all locations
+        // otherwise is done
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

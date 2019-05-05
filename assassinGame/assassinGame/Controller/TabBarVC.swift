@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TabBarVC: UITabBarController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class TabBarVC: UITabBarController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate  {
     var game: Game?;
     var name: String?;
     var player: Player?;
-
+    let manager = CLLocationManager();
+    var userLocation: CLLocation = CLLocation(latitude: 37.8716, longitude: 122.2727);
+    
     @IBOutlet weak var targetName: UILabel!
     @IBOutlet weak var targetImage: UIImageView!
     
@@ -29,6 +32,7 @@ class TabBarVC: UITabBarController, UIImagePickerControllerDelegate, UINavigatio
             targetName.text = player?.target?.name;
             targetImage.image = player?.target?.image;
         } else {
+            // should be changed to get game from database
             game = Game()
             game!.assignTargets()
             player = game!.getPlayer(name!);
@@ -36,6 +40,8 @@ class TabBarVC: UITabBarController, UIImagePickerControllerDelegate, UINavigatio
             targetImage.image = player!.target!.image;
         }
         // Do any additional setup after loading the view.
+        
+        manager.delegate = self;
     }
     
     @IBAction func takePicture(_ sender: UIButton) {
@@ -71,8 +77,19 @@ class TabBarVC: UITabBarController, UIImagePickerControllerDelegate, UINavigatio
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            userLocation = location;
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+
     func saveImage(_ img: UIImage) {
-        addKillshot(game!.roomNumber, player!.target!, img);
+        manager.requestLocation()
+        addKillshot(game!.roomNumber, player!.target!, img, userLocation);
     }
 
 }
