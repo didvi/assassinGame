@@ -148,7 +148,7 @@ func getPlayerName(_ roomNumber:Int) -> String {
 
 
 //TODO: test if works, maybe change structure
-func addKillshot(_ roomNumber:Int, _ killer: Player,_ img: UIImage) {
+func addKillshot(_ roomNumber:Int, _ killer: Player,_ img: UIImage, _ loc: CLLocation) {
     // adds player's killshot to Storage ~~~~~~~~~~~~~
     
     // converts a player's UIImage to data
@@ -189,8 +189,11 @@ func addKillshot(_ roomNumber:Int, _ killer: Player,_ img: UIImage) {
             
             gameRef.collection("unconfirmedKillshots").document(killer.target!.name).setData([
                 "confirmationsNeeded" : confirmationsNeeded,
-                "denialsNeeded": confirmationsNeeded,
-                "assassin": killer.name
+                "assassin": killer.name,
+                "accepts": 0,
+                "rejects": 0,
+                "latLocation": 0.0,
+                "lonLocation": 0.0,
             ]) { err in if let err = err {
                 print("Error writing document: \(err)")
             } else {
