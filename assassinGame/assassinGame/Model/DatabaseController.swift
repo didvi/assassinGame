@@ -9,7 +9,6 @@
 import Foundation
 import Firebase
 import MapKit
-import Kingfisher
 
 let db = Firestore.firestore()
 

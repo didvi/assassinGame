@@ -8,8 +8,11 @@ target 'assassinGame' do
   # Pods for assassinGame
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
-  pod 'Kingfisher', '~> 5.3.1'
-  pod 'Koloda', '~> 2.0.1'
+
+  	pod 'Firebase/Storage'
+
+  	# pod 'Kingfisher', '~> 5.3.1'
+
+  	pod 'Koloda', '~> 2.0.1'
 
 end
