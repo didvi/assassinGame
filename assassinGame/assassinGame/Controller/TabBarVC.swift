@@ -60,7 +60,7 @@ class TabBarVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 }
                 
                 // Reference to an image file in Firebase Storage
-                let reference = Storage.storage().reference().child("1842/Divi.png")
+                let reference = Storage.storage().reference().child("\(self.roomNumber!)/\(self.targetName!.text!).png")
                 
                 reference.getData(maxSize: 7063823999) { data, error in
                     if error != nil {
