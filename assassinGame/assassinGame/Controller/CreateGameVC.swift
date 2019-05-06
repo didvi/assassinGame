@@ -48,10 +48,10 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBAction func createRoom(_ sender: Any) {
         
         let playerCount = Int(numOfPlayers!.text!)
-        game = Game(playerCount!)
+        let roomNumber = roomNumGenerator.generateRoomNumber()
+        game = Game(roomNumber: roomNumber, playersNeeded: playerCount!)
         
         let creator = Player(nameField.text!, (imageToUpload?.image)!)
-        game.addPlayer(creator)
         
         addGame(game)
         addPlayer(game.roomNumber, creator)
@@ -63,7 +63,6 @@ class CreateGameVC: UIViewController, UINavigationControllerDelegate, UIImagePic
         if let identifier = segue.identifier {
             if identifier == "createToWaitingSegue" {
                 if let dest = segue.destination as? WaitingVC {
-                    dest.game = game;
                     dest.roomNumber = String(game.roomNumber);
                     dest.name = nameField.text;
                 }

@@ -7,31 +7,48 @@
 //
 
 import UIKit
+import CoreLocation
+import Firebase
 
-class WeaponVC: UIViewController {
-// has preliminary logic- will bring up the camera when the button is clicked and can take a photo, however is not stored in the game or sent off to be verified- need to add another verification popup to ensure the user wants to send that photo or if they want to take a new one
-    
-    var game: Game!;
-    var player: Player!;
-    
+class WeaponVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        takePicture()
+    }
 
-        if (game != nil) {
-            player = game!.getPlayer();
-        }
-        // Do any additional setup after loading the view.
+
+        
+    
+    func takePicture() {
+        // checks if the player is allowed to take another killshot
+
+        
+        let picker = UIImagePickerController();
+        picker.delegate = self;
+        picker.sourceType = .camera;
+        self.present(picker, animated: true, completion: nil);
     }
     
-    @IBOutlet weak var imageView: UIImageView!
-    
-    
-//    @IBAction func photoLibraryButtonPressed(_ sender: UIButton) {
-//        let picker = UIImagePickerController();
-//        picker.delegate = self;
-//        picker.sourceType = .photoLibrary;
-//        self.present(picker, animated: true, completion: nil);
-//    }
-
+    // maybe change wording on the alerts-- here and in the take picture function
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let img: UIImage;
+        img = info[.originalImage] as! UIImage;
+//        imageView.image = img;
+        
+        dismiss(animated: true, completion: nil);
+        
+        let alert = UIAlertController(title: "Is this a valid picture of your target?", message: "You only get one shot until your picture is confirmed or denied.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Send", style: .default, handler: {action in
+//            self.saveImage(img);
+        }))
+        alert.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+        
+    }
 
 }

@@ -22,7 +22,6 @@ class WaitingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roomNumberLabel.text = roomNumber
-        // Do any additional setup after loading the view.
         listenDocument()
         
     }
@@ -50,23 +49,11 @@ class WaitingVC: UIViewController {
         if let identifier = segue.identifier {
             if identifier == "waitingToGame" {
                 if let dest = segue.destination as? TabBarVC {
-                    dest.game = game
                     dest.name = name;
+                    dest.roomNumber = Int(roomNumber!)!
                 }
             }
         }
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

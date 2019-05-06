@@ -20,28 +20,16 @@ class Game {
     let snapshots:[String]
     var phoneToPlayer: [String:String]
     
-    init() {
-        self.roomNumber = roomNumGenerator.generateRoomNumber()
-        self.playerCount = 5
-        self.timeLeft = Date()
-        self.players = [Player("jack"), Player("ched"), Player("parm"), Player("goud"), Player("feta")]
-        self.graveyard = [Tombstone]()
-        self.snapshots = [String]()
-        self.phoneToPlayer = [String:String]()
-    }
+
     
-    init(_ playersNeeded:Int) {
-        self.roomNumber = roomNumGenerator.generateRoomNumber()
+    init(roomNumber:Int, playersNeeded:Int) {
+        self.roomNumber = roomNumber
         self.playerCount = playersNeeded
         self.timeLeft = Date()
         self.players = [Player]()
         self.graveyard = [Tombstone]()
         self.snapshots = [String]()
         self.phoneToPlayer = [String:String]()
-    }
-    
-    func addPlayer(_ player: Player) {
-        self.players.append(player)
     }
     
     func removePlayer(_ player: Player) {
@@ -67,30 +55,7 @@ class Game {
         }
         players[players.count - 1].target = players[0];
     }
+   
     
-    func getPlayer() -> Player {
-        // not sure how to do this- xcode gives a new uuid everytime i believe- can't really test
-        let name = getPlayerName(self.roomNumber)
-        print("player name")
-        print(name)
-        for p in players {
-            print(p.name)
-            if p.name.elementsEqual(name) {
-                return p;
-            }
-        }
-        print("player does not exist")
-        return Player("bread");
-    }
     
-    func getPlayer(_ name:String) -> Player {
-        for p in players {
-            print(p.name)
-            if p.name.elementsEqual(name) {
-                return p;
-            }
-        }
-        print("player does not exist")
-        return Player("bread");
-    }
 }

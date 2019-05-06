@@ -62,6 +62,7 @@ class JoinGameVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
             if identifier == "joinToWaitSegue" {
                 if let dest = segue.destination as? WaitingVC {
                     dest.roomNumber = roomNumberInput.text!
+                    dest.name = nameInput.text!
                 }
             }
         }
